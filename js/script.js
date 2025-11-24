@@ -18,7 +18,7 @@ intoBarCloseMobile.addEventListener("click", () => {
 
 window.addEventListener("resize", () => {
   if (window.innerWidth > 650) {
-    menuContainer.classList.remove("close");
+    // menuContainer.classList.remove("close");
     menuContainer.classList.remove("openMenuLeftSide");
   } else {
     menuContainer.classList.remove("close");
