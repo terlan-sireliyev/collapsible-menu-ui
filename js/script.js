@@ -15,14 +15,18 @@ intoBarCloseMobile.addEventListener("click", () => {
   menuContainer.classList.remove("close");
 });
 
-// Resize event
+// Resize event - only act if width actually changes
 window.addEventListener("resize", () => {
-  if (window.innerWidth > 650) {
-    // Desktop: mobil class-ları sil
-    menuContainer.classList.remove("openMenuLeftSide");
-  } else {
-    // Mobil: desktop class-ları sil
-    menuContainer.classList.remove("close");
-    if (closesCollapse) closesCollapse.classList.remove("close");
+  if (window.innerWidth !== currentWidth) {
+    currentWidth = window.innerWidth;
+
+    if (currentWidth > 650) {
+      // Desktop: remove mobile classes
+      menuContainer.classList.remove("openMenuLeftSide");
+    } else {
+      // Mobile: remove desktop classes
+      menuContainer.classList.remove("close");
+      if (closesCollapse) closesCollapse.classList.remove("close");
+    }
   }
 });
