@@ -20,7 +20,7 @@ body {
 /* MENU CONTAINER */
 .menu-container {
   width: 65px;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(180deg, #111827, #1f2933);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   overflow: hidden;
