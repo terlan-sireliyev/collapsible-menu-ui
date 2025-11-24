@@ -15,7 +15,8 @@ intoBarCloseMobile.addEventListener("click", () => {
   menuContainer.classList.remove("close");
 });
 
-// Resize event - only act if width actually changes
+let currentWidth = window.innerWidth;
+
 window.addEventListener("resize", () => {
   if (window.innerWidth !== currentWidth) {
     currentWidth = window.innerWidth;
