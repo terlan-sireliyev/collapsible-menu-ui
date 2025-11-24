@@ -5,8 +5,14 @@ let currentWidth = window.innerWidth;
 
 desktopOpen.addEventListener("click", (e) => {
   e.stopPropagation();
-  menuContainer.classList.add("openMenuLeftSide");
-  menuContainer.classList.toggle("close");
+  if (currentWidth > 650) {
+    menuContainer.classList.add("openMenuLeftSide");
+    menuContainer.classList.toggle("close");
+  }else{
+    menuContainer.classList.add("openMenuLeftSide");
+    menuContainer.classList.add("close");
+  }
+  
 });
 
 intoBarCloseMobile.addEventListener("click", () => {
