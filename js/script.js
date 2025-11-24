@@ -22,6 +22,7 @@ window.addEventListener("resize", () => {
     menuContainer.classList.remove("openMenuLeftSide");
   } else {
     menuContainer.classList.remove("close");
-    closesCollapse.classList.remove("close");
+    // closesCollapse.classList.remove("close");
+    menuContainer.classList.remove("openMenuLeftSide");
   }
 });
