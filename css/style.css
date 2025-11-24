@@ -54,7 +54,6 @@ body {
   pointer-events: none;
   z-index: 999;
 }
- 
 
 .menu-container.close .profileText {
   opacity: 1;
@@ -183,7 +182,6 @@ body {
   /* transition: background 0.3s ease; */
 }
 
-
 /* TITLE */
 .headerTitle h1 {
   margin: 0;
@@ -245,6 +243,11 @@ body {
   .menu-container {
     left: -250px;
     position: fixed;
+    z-index: 1000;
+  }
+
+  .menuToggle:hover {
+    background: #111827; /* hover effekti mobil üçün deaktiv */
   }
   .menu-container.openMenuLeftSide {
     left: 0;
