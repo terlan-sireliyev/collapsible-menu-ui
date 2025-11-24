@@ -14,7 +14,8 @@ body {
 .container {
   display: flex;
   align-items: flex-start;
-  background-color: red-;
+    background: linear-gradient(180deg, #111827, #1f2933);
+
 }
 
 /* MENU CONTAINER */
@@ -43,9 +44,11 @@ body {
 
 .menu-container.close {
   width: 210px;
+    height: 100%;
 }
 .closeBtn.close {
   width: 210px;
+  
 }
 .menu-container.close .aLink span {
   opacity: 1;

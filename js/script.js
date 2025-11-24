@@ -11,18 +11,18 @@ desktopOpen.addEventListener("click", (e) => {
 });
 
 intoBarCloseMobile.addEventListener("click", () => {
-  console.log("salam");
   menuContainer.classList.remove("openMenuLeftSide");
   menuContainer.classList.remove("close");
 });
 
+// Resize event
 window.addEventListener("resize", () => {
   if (window.innerWidth > 650) {
-    // menuContainer.classList.remove("close");
+    // Desktop: mobil class-ları sil
     menuContainer.classList.remove("openMenuLeftSide");
   } else {
+    // Mobil: desktop class-ları sil
     menuContainer.classList.remove("close");
-    // closesCollapse.classList.remove("close");
-    menuContainer.classList.remove("openMenuLeftSide");
+    if (closesCollapse) closesCollapse.classList.remove("close");
   }
 });
