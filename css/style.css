@@ -29,7 +29,6 @@ body {
   display: flex;
   flex-direction: column;
   transition: width 0.3s ease;
-  z-index: 999;
 }
 .closeBtn {
   width: 100%;
@@ -45,7 +44,6 @@ body {
 .menu-container.close {
   width: 210px;
   height: 100%;
-  z-index: 999;
 }
 .closeBtn.close {
   width: 210px;
@@ -56,6 +54,7 @@ body {
   pointer-events: none;
   z-index: 999;
 }
+ 
 
 .menu-container.close .profileText {
   opacity: 1;
@@ -184,10 +183,6 @@ body {
   /* transition: background 0.3s ease; */
 }
 
-.menuToggle:hover {
-  background: #2563eb;
-  z-index:0;
-}
 
 /* TITLE */
 .headerTitle h1 {
