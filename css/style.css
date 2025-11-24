@@ -1,0 +1,266 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f2f5, #e6e9f0);
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  background-color: red-;
+}
+
+/* MENU CONTAINER */
+.menu-container {
+  width: 65px;
+  height: 100vh;
+  background: linear-gradient(180deg, #111827, #1f2933);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  transition: width 0.3s ease;
+}
+.closeBtn {
+  width: 100%;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  padding: 20px 0px;
+  background: #111827;
+  color: #e5e7eb;
+  position: absolute;
+  bottom: 0;
+}
+
+.menu-container.close {
+  width: 210px;
+}
+.closeBtn.close {
+  width: 210px;
+}
+.menu-container.close .aLink span {
+  opacity: 1;
+  transform: translateX(-10px);
+  pointer-events: none;
+}
+
+.menu-container.close .profileText {
+  opacity: 1;
+  transform: translateX(-5px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.closeBtn:hover {
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* MENU ITEMS */
+.menu-items a {
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+  text-decoration: none;
+  color: #e5e7eb;
+  border-bottom: 0.5px solid #968484;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.menu-items a:hover {
+  background: #1f2933;
+}
+
+/* ICON */
+.aLink i {
+  width: 50px;
+  min-width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-items a:hover i {
+  background: #1f2933;
+  color: #ffffff;
+}
+
+/* TEXT */
+.aLink span {
+  margin-left: 5px;
+  white-space: nowrap;
+  font-weight: 500;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* AÇILANDA TEXT GERİ GƏLSİN */
+.menu-container .aLink span {
+  opacity: 1;
+  transform: translateX(5px);
+}
+.profile {
+  display: flex;
+  width: 250px;
+  padding: 10px 8px;
+  border-bottom: 0.5px solid #968484;
+}
+.imgProfile {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+}
+
+.imgProfile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: fill;
+}
+.profileText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 10px;
+  color: #e5e7eb;
+  opacity: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateX(10px);
+}
+
+.profileProfession {
+  font-size: 12px;
+  margin-left: 2px;
+}
+.contentBox {
+  background: #f9fafb;
+  padding: 25px 30px;
+  width: 100%;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* HEADER BAR */
+.headerBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 25px;
+}
+
+/* LEFT MENU ICON */
+.menuToggle {
+  width: 45px;
+  height: 45px;
+  background: #111827;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menuToggle:hover {
+  background: #2563eb;
+}
+
+/* TITLE */
+.headerTitle h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #111827;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.headerTitle span {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+/* RIGHT ICONS */
+.headerIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.headerIcons i {
+  font-size: 18px;
+  color: #374151;
+  cursor: pointer;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.headerIcons i:hover {
+  transform: scale(1.1);
+  color: #2563eb;
+}
+
+/* CONTENT BODY */
+.contentBody {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+}
+
+.contentBody h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #1f2937;
+}
+
+.contentBody p {
+  font-size: 14px;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+.intoBarClose {
+  display: none;
+}
+@media (max-width: 650px) {
+  .menu-container {
+    left: -250px;
+    position: fixed;
+  }
+  .menu-container.openMenuLeftSide {
+    left: 0;
+  }
+  .overlay {
+    display: block;
+  }
+  .overlay.active {
+    display: block;
+  }
+  .intoBarClose {
+    display: block;
+  }
+  .headerTitle h1 {
+    font-size: 16px;
+  }
+  .headerIcons i {
+    font-size: 16px;
+  }
+}

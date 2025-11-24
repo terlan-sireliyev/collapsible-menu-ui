@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapse Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu-container {
+            width: 250px;
+            margin: 50px auto;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            background-color: #fff;
+        }
+
+        .menu-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .menu-header:hover {
+            background-color: #45a049;
+        }
+
+        .menu-items {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #f9f9f9;
+        }
+
+        .menu-items a {
+            display: block;
+            padding: 12px 20px;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+
+        .menu-items a:hover {
+            background-color: #e0e0e0;
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .menu-header.active .arrow {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <h1>Collapse Menu</h1>
+
+    <div class="menu-container">
+        <div class="menu-header">
+            Menu
+            <span class="arrow">&#9654;</span>
+        </div>
+        <div class="menu-items">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        const menuHeader = document.querySelector('.menu-header');
+        const menuItems = document.querySelector('.menu-items');
+
+        menuHeader.addEventListener('click', () => {
+            menuHeader.classList.toggle('active');
+            if(menuItems.style.maxHeight){
+                menuItems.style.maxHeight = null;
+            } else {
+                menuItems.style.maxHeight = menuItems.scrollHeight + "px";
+            }
+        });
+    </script>
+</body>
+</html>
