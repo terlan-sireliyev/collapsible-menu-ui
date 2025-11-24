@@ -24,7 +24,7 @@ body {
   background: linear-gradient(180deg, #111827, #1f2933);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  /* transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
   color: #000;
   display: flex;
   flex-direction: column;
@@ -57,9 +57,10 @@ body {
 
 .menu-container.close .profileText {
   opacity: 1;
-  transform: translateX(-5px);
+  transform: translateX(2px);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
+  /* padding: 0px 5px; */
 }
 
 .closeBtn:hover {
@@ -246,8 +247,8 @@ body {
     z-index: 1000;
   }
 
-  .menuToggle:hover {
-    background: #111827; /* hover effekti mobil üçün deaktiv */
+   .menuToggle {
+    z-index: 200; /* icon menu-container-in üstündə qalsın */
   }
   .menu-container.openMenuLeftSide {
     left: 0;
