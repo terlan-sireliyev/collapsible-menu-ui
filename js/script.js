@@ -8,16 +8,17 @@ desktopOpen.addEventListener("click", (e) => {
   if (currentWidth > 650) {
     menuContainer.classList.add("openMenuLeftSide");
     menuContainer.classList.toggle("close");
-  }else{
+  } else {
     menuContainer.classList.add("openMenuLeftSide");
     menuContainer.classList.add("close");
+    desktopOpen.classList.add("noned");
   }
-  
 });
 
 intoBarCloseMobile.addEventListener("click", () => {
   menuContainer.classList.remove("openMenuLeftSide");
   menuContainer.classList.remove("close");
+  desktopOpen.classList.remove("noned");
 });
 
 window.addEventListener("resize", () => {
@@ -25,10 +26,8 @@ window.addEventListener("resize", () => {
     currentWidth = window.innerWidth;
 
     if (currentWidth > 650) {
-      // Desktop: remove mobile classes
       menuContainer.classList.remove("openMenuLeftSide");
     } else {
-      // Mobile: remove desktop classes
       menuContainer.classList.remove("close");
       if (closesCollapse) closesCollapse.classList.remove("close");
     }
@@ -36,16 +35,13 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("click", (e) => {
-  console.log("salam-1");
-
   if (
     window.innerWidth <= 650 &&
     menuContainer.classList.contains("openMenuLeftSide")
   ) {
-    console.log("salam-2");
     if (!menuContainer.contains(e.target) && e.target !== desktopOpen) {
       menuContainer.classList.remove("openMenuLeftSide");
-      console.log("menu bağlandı");
+      desktopOpen.classList.remove("noned");
     }
   }
 });

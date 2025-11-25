@@ -17,14 +17,12 @@ body {
   background: linear-gradient(180deg, #111827, #1f2933);
 }
 
-/* MENU CONTAINER */
 .menu-container {
   width: 65px;
   height: 100%;
   background: linear-gradient(180deg, #111827, #1f2933);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  /* transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
   color: #000;
   display: flex;
   flex-direction: column;
@@ -32,7 +30,7 @@ body {
 }
 .closeBtn {
   width: 100%;
-  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.3s ease;
   border: none;
   padding: 20px 0px;
   background: #111827;
@@ -60,7 +58,6 @@ body {
   transform: translateX(2px);
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  /* padding: 0px 5px; */
 }
 
 .closeBtn:hover {
@@ -69,7 +66,6 @@ body {
   cursor: pointer;
 }
 
-/* MENU ITEMS */
 .menu-items a {
   display: flex;
   align-items: center;
@@ -84,7 +80,6 @@ body {
   background: #1f2933;
 }
 
-/* ICON */
 .aLink i {
   width: 50px;
   min-width: 50px;
@@ -102,7 +97,6 @@ body {
   color: #ffffff;
 }
 
-/* TEXT */
 .aLink span {
   margin-left: 5px;
   white-space: nowrap;
@@ -110,7 +104,6 @@ body {
   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-/* AÇILANDA TEXT GERİ GƏLSİN */
 .menu-container .aLink span {
   opacity: 1;
   transform: translateX(5px);
@@ -157,7 +150,6 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER BAR */
 .headerBar {
   display: flex;
   align-items: center;
@@ -169,7 +161,6 @@ body {
   margin-bottom: 25px;
 }
 
-/* LEFT MENU ICON */
 .menuToggle {
   width: 45px;
   height: 45px;
@@ -180,10 +171,11 @@ body {
   justify-content: center;
   border-radius: 10px;
   cursor: pointer;
-  /* transition: background 0.3s ease; */
+  transition: background 0.3s ease;
 }
-
-/* TITLE */
+.menuToggle:hover {
+  background-color: #2563eb;
+}
 .headerTitle h1 {
   margin: 0;
   font-size: 20px;
@@ -198,7 +190,6 @@ body {
   color: #6b7280;
 }
 
-/* RIGHT ICONS */
 .headerIcons {
   display: flex;
   gap: 15px;
@@ -216,7 +207,6 @@ body {
   color: #2563eb;
 }
 
-/* CONTENT BODY */
 .contentBody {
   background: #ffffff;
   padding: 25px;
@@ -245,10 +235,15 @@ body {
     left: -250px;
     position: fixed;
     z-index: 1000;
+    transition: 0.5s ease;
   }
 
-   .menuToggle {
-    z-index: 200; /* icon menu-container-in üstündə qalsın */
+  .menuToggle {
+    z-index: 200;
+  }
+  .menuToggle.noned {
+    opacity: 0;
+    z-index: 0;
   }
   .menu-container.openMenuLeftSide {
     left: 0;
